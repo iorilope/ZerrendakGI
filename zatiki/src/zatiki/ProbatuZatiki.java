@@ -18,8 +18,8 @@ public class ProbatuZatiki {
 
 		//erazagutu eta hasieratu f eta g, Zatiki klaseko instantziak [***]
 
-		Zatiki f = new Zatiki (1,5);
-		Zatiki g = new Zatiki (2,5);
+		Zatiki f = new Zatiki ();
+		Zatiki g = new Zatiki ();
 
 
 		Scanner kontsola = new Scanner(System.in);
