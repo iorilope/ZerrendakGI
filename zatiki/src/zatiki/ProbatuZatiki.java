@@ -48,6 +48,7 @@ public class ProbatuZatiki {
 
 		//irakurri g zatikia [***]
 
+		g.get(kontsola);
 		kontsola.nextLine();
 
 		//idatzi g eta bere ezaugarri batzuk
