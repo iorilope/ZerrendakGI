@@ -160,7 +160,7 @@ public class Zatiki {
 		Zatiki a1 = new Zatiki();
 		a1.zenbakitzailea = this.zenbakitzailea * bestea.izendatzailea - this.izendatzailea * bestea.zenbakitzailea;
 		a1.izendatzailea = this.izendatzailea * a1.izendatzailea;
-		a1.sinplifikatua();                                                   
+
 		return a1;
 
 
@@ -177,7 +177,7 @@ public class Zatiki {
 		Zatiki a1 = new Zatiki();
 		a1.zenbakitzailea = this.zenbakitzailea * bestea.zenbakitzailea;
 		a1.izendatzailea = this.izendatzailea * bestea.izendatzailea;
-		a1.sinplifikatua();                                                   
+
 		return a1;
 
 	}
@@ -193,7 +193,7 @@ public class Zatiki {
 		Zatiki a1 = new Zatiki();
 		a1.zenbakitzailea = this.zenbakitzailea * bestea.izendatzailea;
 		a1.izendatzailea = this.izendatzailea * bestea.zenbakitzailea;
-		a1.sinplifikatua();                                                   
+
 		return a1;
 
 	}
@@ -303,7 +303,7 @@ public class Zatiki {
 	 */
 
 	public String put () {
-		String Mezua = zenbakitzailea + " / " + izendatzailea ;
+		String Mezua = zenbakitzailea + "/" + izendatzailea ;
 		return Mezua;
 	}
 
