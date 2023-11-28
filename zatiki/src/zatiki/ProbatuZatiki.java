@@ -83,7 +83,7 @@ public class ProbatuZatiki {
 		//[***]
 		System.out.println();
 		System.out.print("G / F: ");
-		System.out.println(g.batu(f).put());
+		System.out.println(g.zati(f).put());
 		//[***]
 		System.out.println();
 
