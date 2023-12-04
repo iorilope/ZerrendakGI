@@ -64,26 +64,26 @@ public class ProbatuZatiki {
 		//f eta g-ren artean eragiketa batzuk egin,
 		//eta emaitzak idatzi
 		System.out.print("F + G: ");
-		System.out.println(f.batu(g).put());
+		f.batu(g).put();
 		System.out.println();
 		System.out.print("F - G: ");
-		System.out.println(f.kendu(g).put());
+		f.kendu(g).put();
 		//[***]
 		System.out.println();
 		System.out.print("G - F: ");
 		//[***]
-		System.out.println(g.batu(f).put());
+		g.batu(f).put();
 		System.out.println();
 		System.out.print("F * G: ");
-		System.out.println(f.bider(g).put());
+		f.bider(g).put();
 		//[***]
 		System.out.println();
 		System.out.print("F / G: ");
-		System.out.println(f.zati(g).put());
+		f.zati(g).put();
 		//[***]
 		System.out.println();
 		System.out.print("G / F: ");
-		System.out.println(g.zati(f).put());
+		g.zati(f).put();
 		//[***]
 		System.out.println();
 

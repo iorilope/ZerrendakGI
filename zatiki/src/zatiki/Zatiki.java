@@ -302,9 +302,9 @@ public class Zatiki {
 	 * Eragina: zatikia idazten du irteera estandarrean, z/i formatuan 
 	 */
 
-	public String put () {
-		String Mezua = zenbakitzailea + "/" + izendatzailea ;
-		return Mezua;
+	public void put () {
+		System.out.println(zenbakitzailea + "/" + izendatzailea);
+	
 	}
 
 	/**
