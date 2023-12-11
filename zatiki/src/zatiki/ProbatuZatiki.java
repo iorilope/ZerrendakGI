@@ -87,9 +87,9 @@ public class ProbatuZatiki {
 		//[***]
 		System.out.println();
 
-		if (f.berdinaDa(g)) {
+		if (f.sinplifikatua().berdinaDa(g.sinplifikatua())) {
 			System.out.println("F eta G berdinak dira");
-		} else if (f.txikiagoaDa(g)) {
+		} else if (f.sinplifikatua().txikiagoaDa(g.sinplifikatua())) {
 			System.out.println("F txikiagoa da G baino");
 		} else {
 			System.out.println("F handiagoa da G baino");
