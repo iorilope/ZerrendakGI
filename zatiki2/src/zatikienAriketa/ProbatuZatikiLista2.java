@@ -22,7 +22,6 @@ public class ProbatuZatikiLista2 {
 
 		ZatikiLista zatikiListaa = new ZatikiLista();
 
-
 		zatikiListaa.hustu();
 
 		// Sarrera estandarretik irakurtzeko:
@@ -30,19 +29,19 @@ public class ProbatuZatikiLista2 {
 
 		System.out.println
 
-		 ("Idatzi zatikiak (z/i formatuan, bakoitza lerro batean); bukatzeko, CTRL+Z:");
+		("Idatzi zatikiak (z/i formatuan, bakoitza lerro batean); bukatzeko, CTRL+Z:");
 
-		 while (kontsola.hasNext()) {
+		while (kontsola.hasNext()) {
 
-		 z = new Zatiki(); 
+			z = new Zatiki(); 
 
-		 z.get(kontsola);
+			z.get(kontsola);
 
-		 zatikiListaa.erantsiZatikia(z);
+			zatikiListaa.erantsiZatikia(z);
 
-		 kontsola.nextLine();
+			kontsola.nextLine();
 
-		 } //while 
+		} //while 
 		kontsola.close();
 
 		System.out.print("Guztira " + zatikiListaa.zenbatZatiki() + " zatiki daude listan: ");
@@ -59,7 +58,7 @@ public class ProbatuZatikiLista2 {
 			Zatiki zatikiTxikiena = zatikiListaa.zatikiaPosizioan(0);				
 
 			for (int i = 0; i < zatikiListaa.zenbatzatiki; i++) {
-				 Zatiki unekoZatiki = zatikiListaa.zatikiaPosizioan(i);
+				Zatiki unekoZatiki = zatikiListaa.zatikiaPosizioan(i);
 
 				zatikienBatura = zatikienBatura.batu(zatikiListaa.zatikiaPosizioan(i));
 
@@ -68,26 +67,24 @@ public class ProbatuZatikiLista2 {
 				//zatikiHandiena listako i.a baino txikiagoa bada, i.a izango
 				//da handiena hemendik aurrera: [***]
 				if (unekoZatiki.handiagoaDa(zatikiHandiena)) {
-		            zatikiHandiena = unekoZatiki;
-		        }
-
+					zatikiHandiena = unekoZatiki;
+				}
 
 				//zatikiTxikiena listako i.a baino handiagoa bada, i.a izango
 				//da txikiena hemendik aurrera: [***]
 				if (unekoZatiki.txikiagoaDa(zatikiTxikiena)) {
-		            zatikiTxikiena = unekoZatiki;
-		        }
-
+					zatikiTxikiena = unekoZatiki;
+				}
 
 				//inprimatu uneko zatikia [***]
-				 System.out.println(unekoZatiki);
-
+				System.out.println(unekoZatiki);
 
 				System.out.print(" ");
 			}
+
 			System.out.println("Zatiki handiena: " + zatikiHandiena);
-		    System.out.println("Zatiki txikiena: " + zatikiTxikiena);
-		
+			System.out.println("Zatiki txikiena: " + zatikiTxikiena);
+
 			System.out.println();
 
 			System.out.print("Beren batura da: "); 
@@ -104,9 +101,9 @@ public class ProbatuZatikiLista2 {
 
 			System.out.print("Beren batezbestekoa da: ");
 
-				Zatiki zatikienBatezbestekoa = 
+			Zatiki zatikienBatezbestekoa = 
 					zatikienBatura.zati(new Zatiki(zatikiListaa.zenbatZatiki()));
-				zatikienBatezbestekoa.put();		
+			zatikienBatezbestekoa.put();		
 			System.out.println();
 		}
 	}
