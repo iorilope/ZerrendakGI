@@ -24,8 +24,6 @@ class KontuaTest {
 	public void sortuKontuak(){
 		k1 = new Kontua("ID1",2000);
 	}
-
-
 	/**
 	 * Test method for {@link kontua.Kontua#getDiru_kop()}.
 	 */
@@ -33,8 +31,6 @@ class KontuaTest {
 	void testGetDiru_kop() {
 		//k1 = new Kontua("ID1",2000);
 		assertEquals(k1.getDiru_kop(),2000);
-
-		fail("Not yet implemented");
 	}
 
 	/**
@@ -43,8 +39,8 @@ class KontuaTest {
 	@Test
 	void testGetID() {
 		//k1 = new Kontua("ID1",2000);
-		assertEquals(k1.getID(), "ID1");
-		fail("Not yet implemented");
+		assertEquals(k1.getID(),"ID1");
+
 	}
 
 	/**
@@ -54,8 +50,8 @@ class KontuaTest {
 	void testSetDiru_kop() {
 		//k1 = new Kontua("ID1",2000);
 		k1.setDiru_kop(3000);
-		assertEquals(k1.getDiru_kop(), 2000);
-		fail("Not yet implemented");
+		assertEquals(k1.getDiru_kop(), 3000);
+
 
 	}
 
@@ -66,8 +62,8 @@ class KontuaTest {
 	void testSetID() {
 		//k1 = new Kontua("ID1",2000);
 		k1.setID("ID2");
-		assertEquals(k1.getID(),"ID1");
-		fail("Not yet implemented");
+		assertEquals(k1.getID(),"ID2");
+
 	}
 
 	/**
@@ -77,7 +73,7 @@ class KontuaTest {
 	//k1 = new Kontua("ID1",2000);
 	void testInformazioa() {
 		k1.informazioa();
-		fail("Not yet implemented");
+
 	}
 
 	/**
@@ -87,7 +83,7 @@ class KontuaTest {
 	//k1 = new Kontua("ID1",2000);
 	void testDiruaSartu() {
 		k1.diruaSartu(300);
-		fail("Not yet implemented");
+
 	}
 
 	/**
@@ -97,8 +93,8 @@ class KontuaTest {
 	@Test
 	//k1 = new Kontua("ID1",2000);
 	void testDiruaAtera() throws DirurikGabeException {
-		k1.diruaAtera(1000);
-		fail("Not yet implemented");
+		k1.diruaAtera(2000);
+
 	}
 }
 
