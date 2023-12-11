@@ -28,20 +28,15 @@ public class ProbatuZatikiLista2 {
 		Scanner kontsola = new Scanner(System.in);
 
 		System.out.println
-
 		("Idatzi zatikiak (z/i formatuan, bakoitza lerro batean); bukatzeko, CTRL+Z:");
 
 		while (kontsola.hasNext()) {
-
-			z = new Zatiki(); 
-
+			z = new Zatiki();  
 			z.get(kontsola);
-
 			zatikiListaa.erantsiZatikia(z);
-
 			kontsola.nextLine();
-
 		} //while 
+
 		kontsola.close();
 
 		System.out.print("Guztira " + zatikiListaa.zenbatZatiki() + " zatiki daude listan: ");
