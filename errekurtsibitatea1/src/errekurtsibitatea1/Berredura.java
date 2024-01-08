@@ -2,7 +2,6 @@
  * 
  */
 package errekurtsibitatea1;
-import java.lang.Math;
 
 /**
  * 
@@ -22,8 +21,8 @@ public class Berredura {
 		int z1 = 2;
 	
 	   
-	    int resultado = berredura(z1, berreketa);
-	    System.out.println(resultado);
+	    int erantzuna = berredura(z1, berreketa);
+	    System.out.println(erantzuna);
 	}
 	
 	public static int berredura(int z1, int berreketa) {
