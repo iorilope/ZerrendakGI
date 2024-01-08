@@ -2,6 +2,8 @@ package zatikienAriketa;
 
 import java.util.Scanner;
 
+import zatikienAriketa.Zatiki.ZatiketaZerorekin;
+
 /**
  * ProbatuZatikiLista: ZatikiLista klasea probatzeko programa 
  * @author
@@ -13,8 +15,9 @@ public class ProbatuZatikiLista2 {
 	 * lerroko zatiki bat, eta lista batean sartzen ditu. Emaitzatzat, zatikirik 
 	 * irakurri bada, zatiki guztien arteko handiena eta txikiena, eta beren 
 	 * batura eta batezbestekoa inprimatzen ditu
+	 * @throws ZatiketaZerorekin 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ZatiketaZerorekin {
 
 		//erazagutu z, Zatiki klaseko instantzia (ez dago hasieratu beharrik) [***]
 

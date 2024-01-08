@@ -4,16 +4,15 @@ package zatikienAriketa;
  * @author
  */
 public class ZatikiLista {
+	
+	
 	public long zatiki;
-
 
 	// zatiki-lista (50 osagaikoa) eta listan zenbat zatiki  
 	// dauden gordetzen duen aldagaia [***]
 
-	Zatiki[] zatikiaklist = new Zatiki[50];
-	 public int zenbatzatiki = 0;
-
-
+	Zatiki[] zatikiaklist;
+	public int zenbatzatiki = 0;
 
 	/**
 	 * Eraikitzailea [***]
@@ -21,7 +20,7 @@ public class ZatikiLista {
 	 */
 
 	public ZatikiLista () {
-
+		zatikiaklist = new Zatiki[50];
 	}
 
 

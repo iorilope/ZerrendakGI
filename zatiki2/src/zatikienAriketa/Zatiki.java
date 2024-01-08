@@ -8,7 +8,24 @@ import java.lang.Math;
 /**
  * Zatiki klasea
  */
+
+
+
 public class Zatiki {
+	@SuppressWarnings("serial")
+	public class ZatiketaZerorekin extends Exception {
+		public ZatiketaZerorekin(String s) {super(s);}
+	}
+
+	@SuppressWarnings("serial")
+	public class IzendatzaileDesegokia extends Exception {
+		public IzendatzaileDesegokia(String s) {super(s);}
+	}
+
+	@SuppressWarnings("serial")
+	public class ErroreaIrakurketan extends Exception {
+		public ErroreaIrakurketan(String s) {super(s);}
+	}
 
 	// klasearen barne-errepresentazioa (eremuak): zatikiaren
 	// zenbakitzailea eta izendatzailea [***]
@@ -188,13 +205,17 @@ public class Zatiki {
 	 * @return zatikia / bestea (zatidura, sinplifikaturik)
 	 */
 
-	public Zatiki zati (Zatiki bestea) {
+	public Zatiki zati (Zatiki bestea) throws ZatiketaZerorekin {
 
+		if (izendatzailea == 0) {
+			throw new ZatiketaZerorekin("Zatiketa zerorekin ezin da egin");
+		}
 		Zatiki a1 = new Zatiki();
 		a1.zenbakitzailea = this.zenbakitzailea * bestea.izendatzailea;
 		a1.izendatzailea = this.izendatzailea * bestea.zenbakitzailea;
-
 		return a1;
+
+
 
 	}
 
@@ -269,8 +290,11 @@ public class Zatiki {
 	 * arteko zatidura osoa
 	 */
 
-	public long zatikiaOso () {
+	public long zatikiaOso () throws ZatiketaZerorekin {
 
+		if (izendatzailea == 0) {
+			throw new ZatiketaZerorekin("Zatiketa zerorekin ezin da egin");
+		}
 
 		long osoa = (zenbakitzailea / izendatzailea);
 
@@ -304,7 +328,7 @@ public class Zatiki {
 
 	public void put () {
 		System.out.println(zenbakitzailea + "/" + izendatzailea);
-	
+
 	}
 
 	/**
@@ -315,20 +339,39 @@ public class Zatiki {
 	 * Oharra: irakurritako izendatzailea negatiboa bada, zeinua  
 	 *         aldatzen zaie bai zenbakitzaileari bai izendatzaileari
 	 * @param sarrera, nondik zatikia irakurriko baita         
+	 * @throws ErroreaIrakurketan 
 	 */
-	public void get(Scanner sarrera) {
+	public void get(Scanner sarrera)throws IzendatzaileDesegokia, ErroreaIrakurketan {
+
 		long i; //izendatzailea irakurtzeko
 
+
 		sarrera.useDelimiter("[/\\s]"); // bereizletzat / (slash-a), zuriuneak eta lerro-bukaerak hartzeko
+		try {
 
-		this.zenbakitzailea = sarrera.nextInt();
-		i = sarrera.nextInt(); //slash-aren ondorengo zenbakia irakurri (izendatzailea)
-		if (i < 0) { //zeinuak aldatu
-			this.izendatzailea = -i;
-			this.zenbakitzailea = -this.zenbakitzailea;
+
+			this.zenbakitzailea = sarrera.nextInt();
+			i = sarrera.nextInt(); //slash-aren ondorengo zenbakia irakurri (izendatzailea)
+
+			if (i == 0) {
+				throw new IzendatzaileDesegokia("Izendatzaileak ezin dezake 0 izan");
+
+			}
+
+
+
+			if (i < 0) { //zeinuak aldatu
+				this.izendatzailea = -i;
+				this.zenbakitzailea = -this.zenbakitzailea;
+			}
+			else
+				this.izendatzailea = i;
+			// get
+			
+			//INPIUT MISSMATCH ERABILI STRING DEN JAKITEKO
+		} catch (InputMismatchException e) {
+			throw new ErroreaIrakurketan("Ezin dezake testua izan");
 		}
-		else
-			this.izendatzailea = i;
-	} // get
 
+	}
 }

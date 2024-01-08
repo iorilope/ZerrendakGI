@@ -2,6 +2,10 @@ package zatikienAriketa;
 
 import java.util.Scanner;
 
+import zatikienAriketa.Zatiki.ErroreaIrakurketan;
+import zatikienAriketa.Zatiki.IzendatzaileDesegokia;
+import zatikienAriketa.Zatiki.ZatiketaZerorekin;
+
 
 /**
  * ProbatuZatiki: Zatiki klasea probatzeko programa
@@ -13,8 +17,11 @@ public class ProbatuZatiki {
 	 * main (metodo nagusia): bi zatiki irakurtzen ditu, beren ezaugarri 
 	 * batzuk inprimatu, eta beren arteko eragiketa batzuk egin eta 
 	 * emaitzak inprimatzen ditu
+	 * @throws ZatiketaZerorekin 
+	 * @throws ErroreaIrakurketan 
+	 * @throws IzendatzaileDesegokia 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ZatiketaZerorekin, IzendatzaileDesegokia, ErroreaIrakurketan {
 
 		//erazagutu eta hasieratu f eta g, Zatiki klaseko instantziak [***]
 
