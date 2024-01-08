@@ -70,11 +70,6 @@ public class Zatiki {
 		this.zenbakitzailea = z;
 		this.izendatzailea = i;
 
-
-
-
-
-
 	}
 
 
