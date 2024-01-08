@@ -2,7 +2,11 @@ package zatikienAriketa;
 
 import java.util.Scanner;
 
+import zatikienAriketa.Zatiki.ErroreaIrakurketan;
+import zatikienAriketa.Zatiki.IzendatzaileDesegokia;
 import zatikienAriketa.Zatiki.ZatiketaZerorekin;
+import zatikienAriketa.ZatikiLista.LekurikEz;
+import zatikienAriketa.ZatikiLista.ZatikirikEzPosizioHorretan;
 
 /**
  * ProbatuZatikiLista: ZatikiLista klasea probatzeko programa 
@@ -16,8 +20,12 @@ public class ProbatuZatikiLista2 {
 	 * irakurri bada, zatiki guztien arteko handiena eta txikiena, eta beren 
 	 * batura eta batezbestekoa inprimatzen ditu
 	 * @throws ZatiketaZerorekin 
+	 * @throws ErroreaIrakurketan 
+	 * @throws IzendatzaileDesegokia 
+	 * @throws LekurikEz 
+	 * @throws ZatikirikEzPosizioHorretan 
 	 */
-	public static void main(String[] args) throws ZatiketaZerorekin {
+	public static void main(String[] args) throws ZatiketaZerorekin, IzendatzaileDesegokia, ErroreaIrakurketan, LekurikEz, ZatikirikEzPosizioHorretan {
 
 		//erazagutu z, Zatiki klaseko instantzia (ez dago hasieratu beharrik) [***]
 

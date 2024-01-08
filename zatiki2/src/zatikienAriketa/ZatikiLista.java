@@ -5,6 +5,15 @@ package zatikienAriketa;
  */
 public class ZatikiLista {
 	
+	@SuppressWarnings("serial")
+	public class LekurikEz extends Exception {
+		public LekurikEz(String s) {super(s);}
+	}
+	@SuppressWarnings("serial")
+	public class ZatikirikEzPosizioHorretan extends Exception {
+		public ZatikirikEzPosizioHorretan(String s) {super(s);}
+	}
+	
 	
 	public long zatiki;
 
@@ -49,8 +58,13 @@ public class ZatikiLista {
 	 * erantsiZatikia [***]
 	 * Eragina: z zatikia eransten du listaren bukaeran
 	 * @param z
+	 * @throws LekurikEz 
 	 */
-	public void  erantsiZatikia(Zatiki	z) {
+	public void  erantsiZatikia(Zatiki	z) throws LekurikEz {
+		if (zatikiaklist.length < 50) {
+			throw new LekurikEz("Ez dago tokirik zerrendan");
+			
+		}
 
 		zatikiaklist[zenbatzatiki] = z ;
 		zenbatzatiki++;
@@ -61,13 +75,14 @@ public class ZatikiLista {
 	 * zatikiaPosizioan [***]
 	 * @param pos (0 eta KOP_MAX-en arteko zenbakia)
 	 * @return pos posizioan dagoen zatikiaren berdina den zatikia (berria)
+	 * @throws ZatikirikEzPosizioHorretan 
 	 */
 
-	public Zatiki zatikiaPosizioan(int pos) {
+	public Zatiki zatikiaPosizioan(int pos) throws ZatikirikEzPosizioHorretan {
 
 		if (pos < 0 || pos >50) {
 
-			System.out.println("Posizioak 0-50 artean egon behar du");
+			throw new ZatikirikEzPosizioHorretan("Zatikia ez dago posizio egokian");
 
 		}
 
