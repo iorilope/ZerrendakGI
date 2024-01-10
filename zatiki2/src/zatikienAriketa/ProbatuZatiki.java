@@ -35,6 +35,8 @@ public class ProbatuZatiki {
 
 		//irakurri f zatikia
 		f.get(kontsola);
+		
+		
 		kontsola.nextLine();
 
 		//idatzi f eta bere ezaugarri batzuk
@@ -53,6 +55,8 @@ public class ProbatuZatiki {
 
 		System.out.println("Idatzi beste zatiki bat (z/i):");
 
+		
+		//Try catch gehitu behar da hemen
 		//irakurri g zatikia [***]
 
 		g.get(kontsola);
