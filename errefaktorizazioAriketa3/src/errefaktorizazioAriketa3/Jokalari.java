@@ -19,6 +19,7 @@ public class Jokalari {
 	
 	public void setY(int y) {
 		this.y = y;
+		
 	}
 
 }
