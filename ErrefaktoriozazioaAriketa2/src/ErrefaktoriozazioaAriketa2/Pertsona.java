@@ -4,7 +4,6 @@ public class Pertsona {
 	String telefonoZenbakia;
 
 	public Pertsona(String telefonoZenbakia) {
-		super();
 		this.telefonoZenbakia = telefonoZenbakia;
 	}
 

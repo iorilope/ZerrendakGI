@@ -19,14 +19,14 @@ public class Irakasle extends Pertsona {
 		// Mezuak gorde daitezke Informazoia guztian mezu hauek ere erabiliko
 		// baitugu,str eta izen aldagaiak utsik dijoatze beraz
 		// soberan daude
-		//System.out.println("Izena: " + str);
-		//System.out.println("Adina: " + adina);
+		System.out.println("Izena: " + str);
+		System.out.println("Adina: " + adina);
 		System.out.println("Zenbakia: " + telefonoZenbaki);
 	}
 
 	public void printInformazioGuztia() {
-		//System.out.println("Izena: " + str);
-		//System.out.println("Adina: " + adina);
+		System.out.println("Izena: " + str);
+		System.out.println("Adina: " + adina);
 		System.out.println("Zenbakia: " + this.telefonoZenbaki);
 		for (Mailegua m : maileguak) {
 			System.out.println(m);
