@@ -18,6 +18,6 @@ public class Pertsona {
 		this.telefonoZenbakia = telefonoZenbakia;
 	}
 
-	// Klase sinpleegia freeloader
+	// Klase sinpleegia freeloader bakarrik set eta get dauzka
 
 }
